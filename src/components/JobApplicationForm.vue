@@ -15,9 +15,7 @@
       <label for="jobTitle">Job Title:</label>
       <input type="text" id="jobTitle" v-model="formData.jobTitle"  />
 
-      <label for="resume">Resume (PDF):</label>
-    <input type="file" id="resume" @change="handleFileUpload" accept=".pdf" required />
-  
+     
   <div class="allbuttons">
 
     <button type="submit">Submit</button>
@@ -37,19 +35,11 @@
           email: '',
           number:'',
           jobTitle: '',
-          role:null,
         },
       };
     },
     methods: {
-
-      handleFileUpload(event) {
-      // Handle file upload and set it in formData.resume
-      this.formData.resume = event.target.files[0];
-    },
-      
       submitForm() {
-        
         console.log('Form Data:', this.formData);
         
       },
